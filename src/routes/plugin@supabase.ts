@@ -15,8 +15,8 @@ export const {
   const parsed = await z
     .object({ supabaseKey: z.string(), supabaseUrl: z.string() })
     .parseAsync({
-      supabaseKey: event.env.get("PUBLIC_SUPABASE_ANON_KEY"),
-      supabaseUrl: event.env.get("PUBLIC_SUPABASE_URL"),
+      supabaseKey: event.env.get("VITE_SUPABASE_ANON_KEY"),
+      supabaseUrl: event.env.get("VITE_SUPABASE_URL"),
     });
 
   return {
